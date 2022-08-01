@@ -11,7 +11,7 @@
 
 set -x
 # comment this line if not running on sls cluster
-#. /data/sls/scratch/share-201907/slstoolchainrc
+. /data/sls/scratch/share-201907/slstoolchainrc
 
 if [ $HOSTNAME == "yoos-X17-AT-22" ];  then  
   source /home/yoos/anaconda3/bin/activate ast    #本机操作
