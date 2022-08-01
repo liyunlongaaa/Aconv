@@ -6,4 +6,3 @@
 # @File    : __init__.py
 
 from .AconvNext_models import *
-from .convX_model import *
