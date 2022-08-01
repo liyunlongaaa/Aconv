@@ -16,7 +16,7 @@ from torch.utils.data import WeightedRandomSampler
 basepath = os.path.dirname(os.path.dirname(sys.path[0]))
 sys.path.append(basepath)
 import dataloader
-import models
+from models import AconvNext_models
 import numpy as np
 from traintest import train, validate
 
@@ -54,6 +54,7 @@ parser.add_argument("--fstride", type=int, default=10, help="soft split freq str
 parser.add_argument("--tstride", type=int, default=10, help="soft split time stride, overlap=patch_size-stride")
 parser.add_argument('--imagenet_pretrain', help='if use ImageNet pretrained audio spectrogram transformer model', type=ast.literal_eval, default='True')
 parser.add_argument('--audioset_pretrain', help='if use ImageNet and audioset pretrained audio spectrogram transformer model', type=ast.literal_eval, default='False')
+parser.add_argument('--model_size', type=str, help='model_size', default='xlarge')
 
 args = parser.parse_args()
 
@@ -88,8 +89,8 @@ if args.model == 'Conv':
         dataloader.AudiosetDataset(args.data_val, label_csv=args.label_csv, audio_conf=val_audio_conf),
         batch_size=args.batch_size*2, shuffle=False, num_workers=args.num_workers, pin_memory=True)
 
-    audio_model = models.ConvNextModel(label_dim=args.n_class, fstride=args.fstride, tstride=args.tstride, imagenet_pretrain=args.imagenet_pretrain,
-                                  audioset_pretrain=args.audioset_pretrain, model_size='base')
+    audio_model = AconvNext_models.ConvNextModel(label_dim=args.n_class, fstride=args.fstride, tstride=args.tstride,
+        imagenet_pretrain=args.imagenet_pretrain, audioset_pretrain=args.audioset_pretrain, model_size=args.model_size)
 
 print("\nCreating experiment directory: %s" % args.exp_dir)
 os.makedirs("%s/models" % args.exp_dir, exist_ok=True)
