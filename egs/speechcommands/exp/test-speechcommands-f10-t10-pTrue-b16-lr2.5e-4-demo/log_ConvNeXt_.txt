@@ -1,0 +1,658 @@
+I am process 374, running on fdb9c3bbabc4: starting (Tue Aug  2 03:06:07 2022)
+now train a Conv based model
+balanced sampler is not used
+---------------the train dataloader---------------
+now using following mask: 48 freq, 48 time
+now using mix-up with rate 0.600000
+now process speechcommands
+use dataset mean -6.846 and std 5.565 to normalize the input.
+now use noise augmentation
+number of classes is 35
+---------------the evaluation dataloader---------------
+now using following mask: 0 freq, 0 time
+now using mix-up with rate 0.000000
+now process speechcommands
+use dataset mean -6.846 and std 5.565 to normalize the input.
+number of classes is 35
+---------------ConvNext Model Summary---------------
+ImageNet pretraining: True, AudioSet pretraining: False
+
+Creating experiment directory: ./exp/test-speechcommands-f4-t4-pTrue-b128-lr2.5e-4-demo
+Now starting training for 30 epochs
+running on cuda
+Total parameter number is : 27.846 million
+Total trainable parameter number is : 27.846 million
+scheduler for speech commands is used
+now training with speechcommands, main metrics: acc, loss function: BCEWithLogitsLoss(), learning rate scheduler: <torch.optim.lr_scheduler.MultiStepLR object at 0x7f83791e9210>
+current #steps=0, #epochs=1
+start training...
+---------------
+2022-08-02 03:06:25.430817
+current #epochs=1, #steps=0
+Epoch: [1][100/663]	Per Sample Total Time 0.00595	Per Sample Data Time 0.00112	Per Sample DNN Time 0.00483	Train Loss 0.1471	
+Epoch: [1][200/663]	Per Sample Total Time 0.00496	Per Sample Data Time 0.00057	Per Sample DNN Time 0.00439	Train Loss 0.1377	
+Epoch: [1][300/663]	Per Sample Total Time 0.00465	Per Sample Data Time 0.00038	Per Sample DNN Time 0.00427	Train Loss 0.1311	
+Epoch: [1][400/663]	Per Sample Total Time 0.00451	Per Sample Data Time 0.00029	Per Sample DNN Time 0.00422	Train Loss 0.1226	
+Epoch: [1][500/663]	Per Sample Total Time 0.00441	Per Sample Data Time 0.00023	Per Sample DNN Time 0.00418	Train Loss 0.1148	
+Epoch: [1][600/663]	Per Sample Total Time 0.00434	Per Sample Data Time 0.00020	Per Sample DNN Time 0.00414	Train Loss 0.1083	
+start validation
+acc: 0.931370
+AUC: 0.997159
+Avg Precision: 0.551330
+Avg Recall: 0.830583
+d_prime: 3.911142
+train_loss: 0.104887
+valid_loss: 0.689495
+validation finished
+Epoch-1 lr: 0.00025
+epoch 1 training time: 393.213
+---------------
+2022-08-02 03:12:58.644110
+current #epochs=2, #steps=663
+Epoch: [2][37/663]	Per Sample Total Time 0.00874	Per Sample Data Time 0.00245	Per Sample DNN Time 0.00629	Train Loss 0.0707	
+Epoch: [2][137/663]	Per Sample Total Time 0.00529	Per Sample Data Time 0.00068	Per Sample DNN Time 0.00461	Train Loss 0.0690	
+Epoch: [2][237/663]	Per Sample Total Time 0.00475	Per Sample Data Time 0.00040	Per Sample DNN Time 0.00435	Train Loss 0.0676	
+Epoch: [2][337/663]	Per Sample Total Time 0.00451	Per Sample Data Time 0.00028	Per Sample DNN Time 0.00423	Train Loss 0.0667	
+Epoch: [2][437/663]	Per Sample Total Time 0.00440	Per Sample Data Time 0.00022	Per Sample DNN Time 0.00418	Train Loss 0.0660	
+Epoch: [2][537/663]	Per Sample Total Time 0.00432	Per Sample Data Time 0.00018	Per Sample DNN Time 0.00414	Train Loss 0.0651	
+Epoch: [2][637/663]	Per Sample Total Time 0.00425	Per Sample Data Time 0.00015	Per Sample DNN Time 0.00409	Train Loss 0.0644	
+start validation
+acc: 0.959623
+AUC: 0.999197
+Avg Precision: 0.462350
+Avg Recall: 0.977153
+d_prime: 4.461777
+train_loss: 0.064254
+valid_loss: 0.686071
+validation finished
+Epoch-2 lr: 0.00025
+epoch 2 training time: 387.689
+---------------
+2022-08-02 03:19:26.333634
+current #epochs=3, #steps=1326
+Epoch: [3][74/663]	Per Sample Total Time 0.00626	Per Sample Data Time 0.00107	Per Sample DNN Time 0.00519	Train Loss 0.0599	
+Epoch: [3][174/663]	Per Sample Total Time 0.00498	Per Sample Data Time 0.00046	Per Sample DNN Time 0.00451	Train Loss 0.0599	
+Epoch: [3][274/663]	Per Sample Total Time 0.00466	Per Sample Data Time 0.00030	Per Sample DNN Time 0.00436	Train Loss 0.0594	
+Epoch: [3][374/663]	Per Sample Total Time 0.00450	Per Sample Data Time 0.00022	Per Sample DNN Time 0.00428	Train Loss 0.0589	
+Epoch: [3][474/663]	Per Sample Total Time 0.00440	Per Sample Data Time 0.00018	Per Sample DNN Time 0.00422	Train Loss 0.0585	
+Epoch: [3][574/663]	Per Sample Total Time 0.00435	Per Sample Data Time 0.00015	Per Sample DNN Time 0.00420	Train Loss 0.0583	
+start validation
+acc: 0.963531
+AUC: 0.999448
+Avg Precision: 0.521590
+Avg Recall: 0.975151
+d_prime: 4.614138
+train_loss: 0.058065
+valid_loss: 0.685605
+validation finished
+Epoch-3 lr: 0.00025
+epoch 3 training time: 392.522
+---------------
+2022-08-02 03:25:58.856194
+current #epochs=4, #steps=1989
+Epoch: [4][11/663]	Per Sample Total Time 0.01855	Per Sample Data Time 0.00695	Per Sample DNN Time 0.01160	Train Loss 0.0556	
+Epoch: [4][111/663]	Per Sample Total Time 0.00559	Per Sample Data Time 0.00075	Per Sample DNN Time 0.00484	Train Loss 0.0556	
+Epoch: [4][211/663]	Per Sample Total Time 0.00486	Per Sample Data Time 0.00040	Per Sample DNN Time 0.00445	Train Loss 0.0554	
+Epoch: [4][311/663]	Per Sample Total Time 0.00460	Per Sample Data Time 0.00028	Per Sample DNN Time 0.00433	Train Loss 0.0553	
+Epoch: [4][411/663]	Per Sample Total Time 0.00446	Per Sample Data Time 0.00021	Per Sample DNN Time 0.00425	Train Loss 0.0552	
+Epoch: [4][511/663]	Per Sample Total Time 0.00438	Per Sample Data Time 0.00017	Per Sample DNN Time 0.00420	Train Loss 0.0549	
+Epoch: [4][611/663]	Per Sample Total Time 0.00431	Per Sample Data Time 0.00014	Per Sample DNN Time 0.00416	Train Loss 0.0547	
+start validation
+acc: 0.966937
+AUC: 0.999471
+Avg Precision: 0.517036
+Avg Recall: 0.999752
+d_prime: 4.630798
+train_loss: 0.054577
+valid_loss: 0.684981
+validation finished
+Epoch-4 lr: 0.00025
+epoch 4 training time: 391.597
+---------------
+2022-08-02 03:32:30.453342
+current #epochs=5, #steps=2652
+Epoch: [5][48/663]	Per Sample Total Time 0.00748	Per Sample Data Time 0.00176	Per Sample DNN Time 0.00572	Train Loss 0.0541	
+Epoch: [5][148/663]	Per Sample Total Time 0.00520	Per Sample Data Time 0.00058	Per Sample DNN Time 0.00461	Train Loss 0.0534	
+Epoch: [5][248/663]	Per Sample Total Time 0.00473	Per Sample Data Time 0.00035	Per Sample DNN Time 0.00437	Train Loss 0.0531	
+Epoch: [5][348/663]	Per Sample Total Time 0.00452	Per Sample Data Time 0.00025	Per Sample DNN Time 0.00427	Train Loss 0.0531	
+Epoch: [5][448/663]	Per Sample Total Time 0.00443	Per Sample Data Time 0.00020	Per Sample DNN Time 0.00423	Train Loss 0.0530	
+Epoch: [5][548/663]	Per Sample Total Time 0.00435	Per Sample Data Time 0.00016	Per Sample DNN Time 0.00419	Train Loss 0.0530	
+Epoch: [5][648/663]	Per Sample Total Time 0.00426	Per Sample Data Time 0.00014	Per Sample DNN Time 0.00412	Train Loss 0.0528	
+start validation
+acc: 0.968340
+AUC: 0.999489
+Avg Precision: 0.568046
+Avg Recall: 0.992137
+d_prime: 4.645223
+train_loss: 0.052790
+valid_loss: 0.684651
+validation finished
+Epoch-5 lr: 0.0002125
+epoch 5 training time: 390.850
+---------------
+2022-08-02 03:39:01.303771
+current #epochs=6, #steps=3315
+Epoch: [6][85/663]	Per Sample Total Time 0.00591	Per Sample Data Time 0.00099	Per Sample DNN Time 0.00492	Train Loss 0.0510	
+Epoch: [6][185/663]	Per Sample Total Time 0.00490	Per Sample Data Time 0.00046	Per Sample DNN Time 0.00443	Train Loss 0.0513	
+Epoch: [6][285/663]	Per Sample Total Time 0.00459	Per Sample Data Time 0.00030	Per Sample DNN Time 0.00428	Train Loss 0.0514	
+Epoch: [6][385/663]	Per Sample Total Time 0.00442	Per Sample Data Time 0.00023	Per Sample DNN Time 0.00419	Train Loss 0.0512	
+Epoch: [6][485/663]	Per Sample Total Time 0.00434	Per Sample Data Time 0.00018	Per Sample DNN Time 0.00415	Train Loss 0.0511	
+Epoch: [6][585/663]	Per Sample Total Time 0.00427	Per Sample Data Time 0.00015	Per Sample DNN Time 0.00412	Train Loss 0.0510	
+start validation
+acc: 0.968941
+AUC: 0.999519
+Avg Precision: 0.496914
+Avg Recall: 0.999752
+d_prime: 4.668765
+train_loss: 0.050901
+valid_loss: 0.684779
+validation finished
+Epoch-6 lr: 0.00018062499999999999
+epoch 6 training time: 386.687
+---------------
+2022-08-02 03:45:27.991037
+current #epochs=7, #steps=3978
+Epoch: [7][22/663]	Per Sample Total Time 0.01103	Per Sample Data Time 0.00374	Per Sample DNN Time 0.00729	Train Loss 0.0494	
+Epoch: [7][122/663]	Per Sample Total Time 0.00532	Per Sample Data Time 0.00071	Per Sample DNN Time 0.00461	Train Loss 0.0492	
+Epoch: [7][222/663]	Per Sample Total Time 0.00473	Per Sample Data Time 0.00039	Per Sample DNN Time 0.00434	Train Loss 0.0494	
+Epoch: [7][322/663]	Per Sample Total Time 0.00450	Per Sample Data Time 0.00027	Per Sample DNN Time 0.00422	Train Loss 0.0494	
+Epoch: [7][422/663]	Per Sample Total Time 0.00438	Per Sample Data Time 0.00021	Per Sample DNN Time 0.00417	Train Loss 0.0494	
+Epoch: [7][522/663]	Per Sample Total Time 0.00430	Per Sample Data Time 0.00017	Per Sample DNN Time 0.00413	Train Loss 0.0494	
+Epoch: [7][622/663]	Per Sample Total Time 0.00423	Per Sample Data Time 0.00015	Per Sample DNN Time 0.00408	Train Loss 0.0493	
+start validation
+acc: 0.972748
+AUC: 0.999685
+Avg Precision: 0.566339
+Avg Recall: 1.000000
+d_prime: 4.834514
+train_loss: 0.049304
+valid_loss: 0.684104
+validation finished
+Epoch-7 lr: 0.00015353125
+epoch 7 training time: 386.089
+---------------
+2022-08-02 03:51:54.079551
+current #epochs=8, #steps=4641
+Epoch: [8][59/663]	Per Sample Total Time 0.00676	Per Sample Data Time 0.00126	Per Sample DNN Time 0.00550	Train Loss 0.0483	
+Epoch: [8][159/663]	Per Sample Total Time 0.00502	Per Sample Data Time 0.00048	Per Sample DNN Time 0.00454	Train Loss 0.0484	
+Epoch: [8][259/663]	Per Sample Total Time 0.00465	Per Sample Data Time 0.00030	Per Sample DNN Time 0.00435	Train Loss 0.0483	
+Epoch: [8][359/663]	Per Sample Total Time 0.00447	Per Sample Data Time 0.00022	Per Sample DNN Time 0.00426	Train Loss 0.0483	
+Epoch: [8][459/663]	Per Sample Total Time 0.00438	Per Sample Data Time 0.00017	Per Sample DNN Time 0.00421	Train Loss 0.0483	
+Epoch: [8][559/663]	Per Sample Total Time 0.00431	Per Sample Data Time 0.00014	Per Sample DNN Time 0.00417	Train Loss 0.0482	
+Epoch: [8][659/663]	Per Sample Total Time 0.00423	Per Sample Data Time 0.00012	Per Sample DNN Time 0.00410	Train Loss 0.0482	
+start validation
+acc: 0.972748
+AUC: 0.999701
+Avg Precision: 0.574983
+Avg Recall: 1.000000
+d_prime: 4.854543
+train_loss: 0.048169
+valid_loss: 0.684115
+validation finished
+Epoch-8 lr: 0.0001305015625
+epoch 8 training time: 388.420
+---------------
+2022-08-02 03:58:22.499803
+current #epochs=9, #steps=5304
+Epoch: [9][96/663]	Per Sample Total Time 0.00581	Per Sample Data Time 0.00082	Per Sample DNN Time 0.00499	Train Loss 0.0477	
+Epoch: [9][196/663]	Per Sample Total Time 0.00487	Per Sample Data Time 0.00041	Per Sample DNN Time 0.00446	Train Loss 0.0477	
+Epoch: [9][296/663]	Per Sample Total Time 0.00458	Per Sample Data Time 0.00027	Per Sample DNN Time 0.00431	Train Loss 0.0476	
+Epoch: [9][396/663]	Per Sample Total Time 0.00444	Per Sample Data Time 0.00021	Per Sample DNN Time 0.00424	Train Loss 0.0476	
+Epoch: [9][496/663]	Per Sample Total Time 0.00436	Per Sample Data Time 0.00017	Per Sample DNN Time 0.00419	Train Loss 0.0474	
+Epoch: [9][596/663]	Per Sample Total Time 0.00430	Per Sample Data Time 0.00014	Per Sample DNN Time 0.00416	Train Loss 0.0474	
+start validation
+acc: 0.973249
+AUC: 0.999613
+Avg Precision: 0.526521
+Avg Recall: 0.999586
+d_prime: 4.754605
+train_loss: 0.047330
+valid_loss: 0.684271
+validation finished
+Epoch-9 lr: 0.00011092632812499999
+epoch 9 training time: 390.637
+---------------
+2022-08-02 04:04:53.137065
+current #epochs=10, #steps=5967
+Epoch: [10][33/663]	Per Sample Total Time 0.00920	Per Sample Data Time 0.00277	Per Sample DNN Time 0.00644	Train Loss 0.0462	
+Epoch: [10][133/663]	Per Sample Total Time 0.00533	Per Sample Data Time 0.00071	Per Sample DNN Time 0.00462	Train Loss 0.0463	
+Epoch: [10][233/663]	Per Sample Total Time 0.00479	Per Sample Data Time 0.00041	Per Sample DNN Time 0.00438	Train Loss 0.0466	
+Epoch: [10][333/663]	Per Sample Total Time 0.00455	Per Sample Data Time 0.00029	Per Sample DNN Time 0.00426	Train Loss 0.0467	
+Epoch: [10][433/663]	Per Sample Total Time 0.00444	Per Sample Data Time 0.00022	Per Sample DNN Time 0.00421	Train Loss 0.0465	
+Epoch: [10][533/663]	Per Sample Total Time 0.00436	Per Sample Data Time 0.00018	Per Sample DNN Time 0.00418	Train Loss 0.0465	
+Epoch: [10][633/663]	Per Sample Total Time 0.00428	Per Sample Data Time 0.00016	Per Sample DNN Time 0.00412	Train Loss 0.0464	
+start validation
+acc: 0.972648
+AUC: 0.999637
+Avg Precision: 0.556696
+Avg Recall: 0.999834
+d_prime: 4.778956
+train_loss: 0.046368
+valid_loss: 0.684149
+validation finished
+Epoch-10 lr: 9.428737890624999e-05
+epoch 10 training time: 390.948
+---------------
+2022-08-02 04:11:24.084759
+current #epochs=11, #steps=6630
+Epoch: [11][70/663]	Per Sample Total Time 0.00656	Per Sample Data Time 0.00115	Per Sample DNN Time 0.00540	Train Loss 0.0463	
+Epoch: [11][170/663]	Per Sample Total Time 0.00506	Per Sample Data Time 0.00048	Per Sample DNN Time 0.00458	Train Loss 0.0459	
+Epoch: [11][270/663]	Per Sample Total Time 0.00469	Per Sample Data Time 0.00031	Per Sample DNN Time 0.00438	Train Loss 0.0458	
+Epoch: [11][370/663]	Per Sample Total Time 0.00451	Per Sample Data Time 0.00023	Per Sample DNN Time 0.00428	Train Loss 0.0458	
+Epoch: [11][470/663]	Per Sample Total Time 0.00442	Per Sample Data Time 0.00018	Per Sample DNN Time 0.00424	Train Loss 0.0458	
+Epoch: [11][570/663]	Per Sample Total Time 0.00435	Per Sample Data Time 0.00015	Per Sample DNN Time 0.00420	Train Loss 0.0457	
+start validation
+acc: 0.975053
+AUC: 0.999570
+Avg Precision: 0.511284
+Avg Recall: 0.999834
+d_prime: 4.713258
+train_loss: 0.045732
+valid_loss: 0.684255
+validation finished
+Epoch-11 lr: 8.014427207031248e-05
+epoch 11 training time: 390.380
+---------------
+2022-08-02 04:17:54.464415
+current #epochs=12, #steps=7293
+Epoch: [12][7/663]	Per Sample Total Time 0.02412	Per Sample Data Time 0.01087	Per Sample DNN Time 0.01326	Train Loss 0.0456	
+Epoch: [12][107/663]	Per Sample Total Time 0.00549	Per Sample Data Time 0.00081	Per Sample DNN Time 0.00468	Train Loss 0.0451	
+Epoch: [12][207/663]	Per Sample Total Time 0.00479	Per Sample Data Time 0.00043	Per Sample DNN Time 0.00436	Train Loss 0.0452	
+Epoch: [12][307/663]	Per Sample Total Time 0.00453	Per Sample Data Time 0.00029	Per Sample DNN Time 0.00424	Train Loss 0.0453	
+Epoch: [12][407/663]	Per Sample Total Time 0.00442	Per Sample Data Time 0.00022	Per Sample DNN Time 0.00420	Train Loss 0.0452	
+Epoch: [12][507/663]	Per Sample Total Time 0.00433	Per Sample Data Time 0.00018	Per Sample DNN Time 0.00416	Train Loss 0.0452	
+Epoch: [12][607/663]	Per Sample Total Time 0.00428	Per Sample Data Time 0.00015	Per Sample DNN Time 0.00413	Train Loss 0.0451	
+start validation
+acc: 0.975453
+AUC: 0.999665
+Avg Precision: 0.597449
+Avg Recall: 0.999834
+d_prime: 4.810561
+train_loss: 0.045159
+valid_loss: 0.683785
+validation finished
+Epoch-12 lr: 6.81226312597656e-05
+epoch 12 training time: 389.167
+---------------
+2022-08-02 04:24:23.631193
+current #epochs=13, #steps=7956
+Epoch: [13][44/663]	Per Sample Total Time 0.00785	Per Sample Data Time 0.00180	Per Sample DNN Time 0.00605	Train Loss 0.0457	
+Epoch: [13][144/663]	Per Sample Total Time 0.00525	Per Sample Data Time 0.00056	Per Sample DNN Time 0.00469	Train Loss 0.0450	
+Epoch: [13][244/663]	Per Sample Total Time 0.00473	Per Sample Data Time 0.00034	Per Sample DNN Time 0.00440	Train Loss 0.0450	
+Epoch: [13][344/663]	Per Sample Total Time 0.00452	Per Sample Data Time 0.00024	Per Sample DNN Time 0.00428	Train Loss 0.0447	
+Epoch: [13][444/663]	Per Sample Total Time 0.00442	Per Sample Data Time 0.00019	Per Sample DNN Time 0.00423	Train Loss 0.0448	
+Epoch: [13][544/663]	Per Sample Total Time 0.00434	Per Sample Data Time 0.00016	Per Sample DNN Time 0.00419	Train Loss 0.0448	
+Epoch: [13][644/663]	Per Sample Total Time 0.00426	Per Sample Data Time 0.00013	Per Sample DNN Time 0.00413	Train Loss 0.0448	
+start validation
+acc: 0.973450
+AUC: 0.999651
+Avg Precision: 0.566156
+Avg Recall: 0.999669
+d_prime: 4.794227
+train_loss: 0.044779
+valid_loss: 0.683980
+validation finished
+Epoch-13 lr: 5.7904236570800764e-05
+epoch 13 training time: 389.089
+---------------
+2022-08-02 04:30:52.719924
+current #epochs=14, #steps=8619
+Epoch: [14][81/663]	Per Sample Total Time 0.00611	Per Sample Data Time 0.00107	Per Sample DNN Time 0.00505	Train Loss 0.0446	
+Epoch: [14][181/663]	Per Sample Total Time 0.00496	Per Sample Data Time 0.00049	Per Sample DNN Time 0.00447	Train Loss 0.0445	
+Epoch: [14][281/663]	Per Sample Total Time 0.00464	Per Sample Data Time 0.00032	Per Sample DNN Time 0.00432	Train Loss 0.0444	
+Epoch: [14][381/663]	Per Sample Total Time 0.00446	Per Sample Data Time 0.00024	Per Sample DNN Time 0.00422	Train Loss 0.0443	
+Epoch: [14][481/663]	Per Sample Total Time 0.00437	Per Sample Data Time 0.00019	Per Sample DNN Time 0.00418	Train Loss 0.0443	
+Epoch: [14][581/663]	Per Sample Total Time 0.00430	Per Sample Data Time 0.00016	Per Sample DNN Time 0.00414	Train Loss 0.0442	
+start validation
+acc: 0.975754
+AUC: 0.999713
+Avg Precision: 0.570469
+Avg Recall: 1.000000
+d_prime: 4.870406
+train_loss: 0.044173
+valid_loss: 0.683778
+validation finished
+Epoch-14 lr: 4.921860108518065e-05
+epoch 14 training time: 389.669
+---------------
+2022-08-02 04:37:22.388798
+current #epochs=15, #steps=9282
+Epoch: [15][18/663]	Per Sample Total Time 0.01287	Per Sample Data Time 0.00484	Per Sample DNN Time 0.00803	Train Loss 0.0452	
+Epoch: [15][118/663]	Per Sample Total Time 0.00541	Per Sample Data Time 0.00078	Per Sample DNN Time 0.00463	Train Loss 0.0440	
+Epoch: [15][218/663]	Per Sample Total Time 0.00479	Per Sample Data Time 0.00043	Per Sample DNN Time 0.00436	Train Loss 0.0442	
+Epoch: [15][318/663]	Per Sample Total Time 0.00454	Per Sample Data Time 0.00030	Per Sample DNN Time 0.00424	Train Loss 0.0443	
+Epoch: [15][418/663]	Per Sample Total Time 0.00442	Per Sample Data Time 0.00023	Per Sample DNN Time 0.00419	Train Loss 0.0443	
+Epoch: [15][518/663]	Per Sample Total Time 0.00433	Per Sample Data Time 0.00019	Per Sample DNN Time 0.00415	Train Loss 0.0442	
+Epoch: [15][618/663]	Per Sample Total Time 0.00427	Per Sample Data Time 0.00016	Per Sample DNN Time 0.00412	Train Loss 0.0442	
+start validation
+acc: 0.975554
+AUC: 0.999673
+Avg Precision: 0.543743
+Avg Recall: 0.996356
+d_prime: 4.819822
+train_loss: 0.044221
+valid_loss: 0.683841
+validation finished
+Epoch-15 lr: 4.183581092240355e-05
+epoch 15 training time: 388.508
+---------------
+2022-08-02 04:43:50.897227
+current #epochs=16, #steps=9945
+Epoch: [16][55/663]	Per Sample Total Time 0.00710	Per Sample Data Time 0.00147	Per Sample DNN Time 0.00562	Train Loss 0.0441	
+Epoch: [16][155/663]	Per Sample Total Time 0.00509	Per Sample Data Time 0.00053	Per Sample DNN Time 0.00456	Train Loss 0.0441	
+Epoch: [16][255/663]	Per Sample Total Time 0.00469	Per Sample Data Time 0.00033	Per Sample DNN Time 0.00436	Train Loss 0.0439	
+Epoch: [16][355/663]	Per Sample Total Time 0.00449	Per Sample Data Time 0.00024	Per Sample DNN Time 0.00426	Train Loss 0.0439	
+Epoch: [16][455/663]	Per Sample Total Time 0.00439	Per Sample Data Time 0.00019	Per Sample DNN Time 0.00420	Train Loss 0.0438	
+Epoch: [16][555/663]	Per Sample Total Time 0.00433	Per Sample Data Time 0.00016	Per Sample DNN Time 0.00417	Train Loss 0.0439	
+Epoch: [16][655/663]	Per Sample Total Time 0.00423	Per Sample Data Time 0.00013	Per Sample DNN Time 0.00410	Train Loss 0.0438	
+start validation
+acc: 0.974752
+AUC: 0.999574
+Avg Precision: 0.531001
+Avg Recall: 0.999834
+d_prime: 4.717240
+train_loss: 0.043854
+valid_loss: 0.684152
+validation finished
+Epoch-16 lr: 3.556043928404302e-05
+epoch 16 training time: 388.507
+---------------
+2022-08-02 04:50:19.404198
+current #epochs=17, #steps=10608
+Epoch: [17][92/663]	Per Sample Total Time 0.00583	Per Sample Data Time 0.00096	Per Sample DNN Time 0.00486	Train Loss 0.0437	
+Epoch: [17][192/663]	Per Sample Total Time 0.00489	Per Sample Data Time 0.00047	Per Sample DNN Time 0.00442	Train Loss 0.0435	
+Epoch: [17][292/663]	Per Sample Total Time 0.00459	Per Sample Data Time 0.00031	Per Sample DNN Time 0.00428	Train Loss 0.0435	
+Epoch: [17][392/663]	Per Sample Total Time 0.00446	Per Sample Data Time 0.00023	Per Sample DNN Time 0.00422	Train Loss 0.0435	
+Epoch: [17][492/663]	Per Sample Total Time 0.00437	Per Sample Data Time 0.00019	Per Sample DNN Time 0.00418	Train Loss 0.0436	
+Epoch: [17][592/663]	Per Sample Total Time 0.00431	Per Sample Data Time 0.00016	Per Sample DNN Time 0.00415	Train Loss 0.0436	
+start validation
+acc: 0.974752
+AUC: 0.999595
+Avg Precision: 0.552578
+Avg Recall: 0.990364
+d_prime: 4.736417
+train_loss: 0.043568
+valid_loss: 0.684053
+validation finished
+Epoch-17 lr: 3.0226373391436563e-05
+epoch 17 training time: 389.212
+---------------
+2022-08-02 04:56:48.616643
+current #epochs=18, #steps=11271
+Epoch: [18][29/663]	Per Sample Total Time 0.00962	Per Sample Data Time 0.00276	Per Sample DNN Time 0.00686	Train Loss 0.0427	
+Epoch: [18][129/663]	Per Sample Total Time 0.00534	Per Sample Data Time 0.00064	Per Sample DNN Time 0.00469	Train Loss 0.0430	
+Epoch: [18][229/663]	Per Sample Total Time 0.00476	Per Sample Data Time 0.00037	Per Sample DNN Time 0.00439	Train Loss 0.0431	
+Epoch: [18][329/663]	Per Sample Total Time 0.00454	Per Sample Data Time 0.00026	Per Sample DNN Time 0.00428	Train Loss 0.0433	
+Epoch: [18][429/663]	Per Sample Total Time 0.00441	Per Sample Data Time 0.00020	Per Sample DNN Time 0.00421	Train Loss 0.0432	
+Epoch: [18][529/663]	Per Sample Total Time 0.00433	Per Sample Data Time 0.00016	Per Sample DNN Time 0.00417	Train Loss 0.0433	
+Epoch: [18][629/663]	Per Sample Total Time 0.00425	Per Sample Data Time 0.00014	Per Sample DNN Time 0.00412	Train Loss 0.0433	
+start validation
+acc: 0.975554
+AUC: 0.999648
+Avg Precision: 0.548768
+Avg Recall: 0.999917
+d_prime: 4.791371
+train_loss: 0.043299
+valid_loss: 0.683880
+validation finished
+Epoch-18 lr: 2.5692417382721078e-05
+epoch 18 training time: 387.679
+---------------
+2022-08-02 05:03:16.296032
+current #epochs=19, #steps=11934
+Epoch: [19][66/663]	Per Sample Total Time 0.00653	Per Sample Data Time 0.00132	Per Sample DNN Time 0.00521	Train Loss 0.0434	
+Epoch: [19][166/663]	Per Sample Total Time 0.00502	Per Sample Data Time 0.00053	Per Sample DNN Time 0.00449	Train Loss 0.0430	
+Epoch: [19][266/663]	Per Sample Total Time 0.00465	Per Sample Data Time 0.00034	Per Sample DNN Time 0.00432	Train Loss 0.0428	
+Epoch: [19][366/663]	Per Sample Total Time 0.00447	Per Sample Data Time 0.00025	Per Sample DNN Time 0.00422	Train Loss 0.0430	
+Epoch: [19][466/663]	Per Sample Total Time 0.00438	Per Sample Data Time 0.00020	Per Sample DNN Time 0.00418	Train Loss 0.0432	
+Epoch: [19][566/663]	Per Sample Total Time 0.00431	Per Sample Data Time 0.00016	Per Sample DNN Time 0.00415	Train Loss 0.0430	
+start validation
+acc: 0.976055
+AUC: 0.999639
+Avg Precision: 0.559638
+Avg Recall: 0.999503
+d_prime: 4.781590
+train_loss: 0.042996
+valid_loss: 0.683852
+validation finished
+Epoch-19 lr: 2.1838554775312915e-05
+epoch 19 training time: 389.787
+---------------
+2022-08-02 05:09:46.083769
+current #epochs=20, #steps=12597
+Epoch: [20][3/663]	Per Sample Total Time 0.04791	Per Sample Data Time 0.02102	Per Sample DNN Time 0.02689	Train Loss 0.0447	
+Epoch: [20][103/663]	Per Sample Total Time 0.00569	Per Sample Data Time 0.00082	Per Sample DNN Time 0.00487	Train Loss 0.0431	
+Epoch: [20][203/663]	Per Sample Total Time 0.00487	Per Sample Data Time 0.00042	Per Sample DNN Time 0.00445	Train Loss 0.0433	
+Epoch: [20][303/663]	Per Sample Total Time 0.00458	Per Sample Data Time 0.00029	Per Sample DNN Time 0.00429	Train Loss 0.0432	
+Epoch: [20][403/663]	Per Sample Total Time 0.00443	Per Sample Data Time 0.00022	Per Sample DNN Time 0.00421	Train Loss 0.0431	
+Epoch: [20][503/663]	Per Sample Total Time 0.00434	Per Sample Data Time 0.00018	Per Sample DNN Time 0.00416	Train Loss 0.0431	
+Epoch: [20][603/663]	Per Sample Total Time 0.00427	Per Sample Data Time 0.00015	Per Sample DNN Time 0.00412	Train Loss 0.0430	
+start validation
+acc: 0.976656
+AUC: 0.999625
+Avg Precision: 0.542029
+Avg Recall: 0.999917
+d_prime: 4.766935
+train_loss: 0.042948
+valid_loss: 0.683965
+validation finished
+Epoch-20 lr: 1.8562771559015977e-05
+epoch 20 training time: 387.345
+---------------
+2022-08-02 05:16:13.428226
+current #epochs=21, #steps=13260
+Epoch: [21][40/663]	Per Sample Total Time 0.00779	Per Sample Data Time 0.00198	Per Sample DNN Time 0.00581	Train Loss 0.0430	
+Epoch: [21][140/663]	Per Sample Total Time 0.00510	Per Sample Data Time 0.00058	Per Sample DNN Time 0.00452	Train Loss 0.0431	
+Epoch: [21][240/663]	Per Sample Total Time 0.00465	Per Sample Data Time 0.00034	Per Sample DNN Time 0.00430	Train Loss 0.0430	
+Epoch: [21][340/663]	Per Sample Total Time 0.00444	Per Sample Data Time 0.00024	Per Sample DNN Time 0.00420	Train Loss 0.0431	
+Epoch: [21][440/663]	Per Sample Total Time 0.00434	Per Sample Data Time 0.00019	Per Sample DNN Time 0.00415	Train Loss 0.0430	
+Epoch: [21][540/663]	Per Sample Total Time 0.00427	Per Sample Data Time 0.00016	Per Sample DNN Time 0.00411	Train Loss 0.0430	
+Epoch: [21][640/663]	Per Sample Total Time 0.00419	Per Sample Data Time 0.00013	Per Sample DNN Time 0.00406	Train Loss 0.0430	
+start validation
+acc: 0.975353
+AUC: 0.999641
+Avg Precision: 0.557462
+Avg Recall: 0.999503
+d_prime: 4.783564
+train_loss: 0.042962
+valid_loss: 0.683822
+validation finished
+Epoch-21 lr: 1.577835582516358e-05
+epoch 21 training time: 383.046
+---------------
+2022-08-02 05:22:36.474435
+current #epochs=22, #steps=13923
+Epoch: [22][77/663]	Per Sample Total Time 0.00599	Per Sample Data Time 0.00090	Per Sample DNN Time 0.00509	Train Loss 0.0428	
+Epoch: [22][177/663]	Per Sample Total Time 0.00485	Per Sample Data Time 0.00040	Per Sample DNN Time 0.00446	Train Loss 0.0427	
+Epoch: [22][277/663]	Per Sample Total Time 0.00454	Per Sample Data Time 0.00026	Per Sample DNN Time 0.00428	Train Loss 0.0426	
+Epoch: [22][377/663]	Per Sample Total Time 0.00440	Per Sample Data Time 0.00019	Per Sample DNN Time 0.00420	Train Loss 0.0425	
+Epoch: [22][477/663]	Per Sample Total Time 0.00431	Per Sample Data Time 0.00015	Per Sample DNN Time 0.00416	Train Loss 0.0425	
+Epoch: [22][577/663]	Per Sample Total Time 0.00425	Per Sample Data Time 0.00013	Per Sample DNN Time 0.00412	Train Loss 0.0427	
+start validation
+acc: 0.977457
+AUC: 0.999628
+Avg Precision: 0.533162
+Avg Recall: 0.999917
+d_prime: 4.770122
+train_loss: 0.042634
+valid_loss: 0.683843
+validation finished
+Epoch-22 lr: 1.3411602451389044e-05
+epoch 22 training time: 383.764
+---------------
+2022-08-02 05:29:00.238317
+current #epochs=23, #steps=14586
+Epoch: [23][14/663]	Per Sample Total Time 0.01480	Per Sample Data Time 0.00573	Per Sample DNN Time 0.00908	Train Loss 0.0441	
+Epoch: [23][114/663]	Per Sample Total Time 0.00548	Per Sample Data Time 0.00076	Per Sample DNN Time 0.00473	Train Loss 0.0420	
+Epoch: [23][214/663]	Per Sample Total Time 0.00480	Per Sample Data Time 0.00041	Per Sample DNN Time 0.00440	Train Loss 0.0421	
+Epoch: [23][314/663]	Per Sample Total Time 0.00458	Per Sample Data Time 0.00028	Per Sample DNN Time 0.00429	Train Loss 0.0423	
+Epoch: [23][414/663]	Per Sample Total Time 0.00445	Per Sample Data Time 0.00021	Per Sample DNN Time 0.00423	Train Loss 0.0425	
+Epoch: [23][514/663]	Per Sample Total Time 0.00438	Per Sample Data Time 0.00018	Per Sample DNN Time 0.00420	Train Loss 0.0425	
+Epoch: [23][614/663]	Per Sample Total Time 0.00431	Per Sample Data Time 0.00015	Per Sample DNN Time 0.00416	Train Loss 0.0425	
+start validation
+acc: 0.976355
+AUC: 0.999663
+Avg Precision: 0.555307
+Avg Recall: 0.999752
+d_prime: 4.808533
+train_loss: 0.042455
+valid_loss: 0.683760
+validation finished
+Epoch-23 lr: 1.1399862083680687e-05
+epoch 23 training time: 392.050
+---------------
+2022-08-02 05:35:32.288117
+current #epochs=24, #steps=15249
+Epoch: [24][51/663]	Per Sample Total Time 0.00737	Per Sample Data Time 0.00158	Per Sample DNN Time 0.00579	Train Loss 0.0419	
+Epoch: [24][151/663]	Per Sample Total Time 0.00520	Per Sample Data Time 0.00055	Per Sample DNN Time 0.00465	Train Loss 0.0420	
+Epoch: [24][251/663]	Per Sample Total Time 0.00476	Per Sample Data Time 0.00033	Per Sample DNN Time 0.00442	Train Loss 0.0421	
+Epoch: [24][351/663]	Per Sample Total Time 0.00455	Per Sample Data Time 0.00024	Per Sample DNN Time 0.00431	Train Loss 0.0424	
+Epoch: [24][451/663]	Per Sample Total Time 0.00444	Per Sample Data Time 0.00019	Per Sample DNN Time 0.00425	Train Loss 0.0424	
+Epoch: [24][551/663]	Per Sample Total Time 0.00438	Per Sample Data Time 0.00016	Per Sample DNN Time 0.00422	Train Loss 0.0426	
+Epoch: [24][651/663]	Per Sample Total Time 0.00428	Per Sample Data Time 0.00013	Per Sample DNN Time 0.00414	Train Loss 0.0425	
+start validation
+acc: 0.977658
+AUC: 0.999674
+Avg Precision: 0.558769
+Avg Recall: 0.993706
+d_prime: 4.821370
+train_loss: 0.042512
+valid_loss: 0.683733
+validation finished
+Epoch-24 lr: 9.689882771128584e-06
+epoch 24 training time: 394.675
+---------------
+2022-08-02 05:42:06.962743
+current #epochs=25, #steps=15912
+Epoch: [25][88/663]	Per Sample Total Time 0.00597	Per Sample Data Time 0.00086	Per Sample DNN Time 0.00511	Train Loss 0.0429	
+Epoch: [25][188/663]	Per Sample Total Time 0.00491	Per Sample Data Time 0.00041	Per Sample DNN Time 0.00450	Train Loss 0.0430	
+Epoch: [25][288/663]	Per Sample Total Time 0.00458	Per Sample Data Time 0.00027	Per Sample DNN Time 0.00431	Train Loss 0.0428	
+Epoch: [25][388/663]	Per Sample Total Time 0.00444	Per Sample Data Time 0.00020	Per Sample DNN Time 0.00424	Train Loss 0.0427	
+Epoch: [25][488/663]	Per Sample Total Time 0.00435	Per Sample Data Time 0.00016	Per Sample DNN Time 0.00419	Train Loss 0.0426	
+Epoch: [25][588/663]	Per Sample Total Time 0.00429	Per Sample Data Time 0.00014	Per Sample DNN Time 0.00415	Train Loss 0.0426	
+start validation
+acc: 0.977056
+AUC: 0.999613
+Avg Precision: 0.526977
+Avg Recall: 0.999917
+d_prime: 4.754873
+train_loss: 0.042535
+valid_loss: 0.683876
+validation finished
+Epoch-25 lr: 8.236400355459297e-06
+epoch 25 training time: 386.884
+---------------
+2022-08-02 05:48:33.847196
+current #epochs=26, #steps=16575
+Epoch: [26][25/663]	Per Sample Total Time 0.01050	Per Sample Data Time 0.00286	Per Sample DNN Time 0.00764	Train Loss 0.0428	
+Epoch: [26][125/663]	Per Sample Total Time 0.00531	Per Sample Data Time 0.00060	Per Sample DNN Time 0.00471	Train Loss 0.0422	
+Epoch: [26][225/663]	Per Sample Total Time 0.00471	Per Sample Data Time 0.00033	Per Sample DNN Time 0.00438	Train Loss 0.0423	
+Epoch: [26][325/663]	Per Sample Total Time 0.00450	Per Sample Data Time 0.00024	Per Sample DNN Time 0.00426	Train Loss 0.0424	
+Epoch: [26][425/663]	Per Sample Total Time 0.00437	Per Sample Data Time 0.00018	Per Sample DNN Time 0.00419	Train Loss 0.0424	
+Epoch: [26][525/663]	Per Sample Total Time 0.00431	Per Sample Data Time 0.00015	Per Sample DNN Time 0.00416	Train Loss 0.0425	
+Epoch: [26][625/663]	Per Sample Total Time 0.00424	Per Sample Data Time 0.00013	Per Sample DNN Time 0.00411	Train Loss 0.0425	
+start validation
+acc: 0.976555
+AUC: 0.999613
+Avg Precision: 0.533567
+Avg Recall: 0.999752
+d_prime: 4.754658
+train_loss: 0.042478
+valid_loss: 0.683835
+validation finished
+Epoch-26 lr: 8.236400355459297e-06
+epoch 26 training time: 386.333
+---------------
+2022-08-02 05:55:00.180043
+current #epochs=27, #steps=17238
+Epoch: [27][62/663]	Per Sample Total Time 0.00651	Per Sample Data Time 0.00125	Per Sample DNN Time 0.00526	Train Loss 0.0419	
+Epoch: [27][162/663]	Per Sample Total Time 0.00499	Per Sample Data Time 0.00049	Per Sample DNN Time 0.00450	Train Loss 0.0424	
+Epoch: [27][262/663]	Per Sample Total Time 0.00464	Per Sample Data Time 0.00031	Per Sample DNN Time 0.00433	Train Loss 0.0424	
+Epoch: [27][362/663]	Per Sample Total Time 0.00448	Per Sample Data Time 0.00022	Per Sample DNN Time 0.00426	Train Loss 0.0422	
+Epoch: [27][462/663]	Per Sample Total Time 0.00438	Per Sample Data Time 0.00018	Per Sample DNN Time 0.00421	Train Loss 0.0422	
+Epoch: [27][562/663]	Per Sample Total Time 0.00433	Per Sample Data Time 0.00015	Per Sample DNN Time 0.00419	Train Loss 0.0422	
+Epoch: [27][662/663]	Per Sample Total Time 0.00424	Per Sample Data Time 0.00013	Per Sample DNN Time 0.00412	Train Loss 0.0422	
+start validation
+acc: 0.977056
+AUC: 0.999626
+Avg Precision: 0.539439
+Avg Recall: 0.999917
+d_prime: 4.767895
+train_loss: 0.042223
+valid_loss: 0.683805
+validation finished
+Epoch-27 lr: 8.236400355459297e-06
+epoch 27 training time: 391.505
+---------------
+2022-08-02 06:01:31.685371
+current #epochs=28, #steps=17901
+Epoch: [28][99/663]	Per Sample Total Time 0.00581	Per Sample Data Time 0.00088	Per Sample DNN Time 0.00493	Train Loss 0.0423	
+Epoch: [28][199/663]	Per Sample Total Time 0.00495	Per Sample Data Time 0.00044	Per Sample DNN Time 0.00450	Train Loss 0.0423	
+Epoch: [28][299/663]	Per Sample Total Time 0.00465	Per Sample Data Time 0.00030	Per Sample DNN Time 0.00435	Train Loss 0.0424	
+Epoch: [28][399/663]	Per Sample Total Time 0.00449	Per Sample Data Time 0.00023	Per Sample DNN Time 0.00427	Train Loss 0.0425	
+Epoch: [28][499/663]	Per Sample Total Time 0.00440	Per Sample Data Time 0.00018	Per Sample DNN Time 0.00422	Train Loss 0.0425	
+Epoch: [28][599/663]	Per Sample Total Time 0.00433	Per Sample Data Time 0.00015	Per Sample DNN Time 0.00418	Train Loss 0.0425	
+start validation
+acc: 0.977157
+AUC: 0.999603
+Avg Precision: 0.516969
+Avg Recall: 0.999917
+d_prime: 4.744732
+train_loss: 0.042520
+valid_loss: 0.683904
+validation finished
+Epoch-28 lr: 8.236400355459297e-06
+epoch 28 training time: 391.572
+---------------
+2022-08-02 06:08:03.257595
+current #epochs=29, #steps=18564
+Epoch: [29][36/663]	Per Sample Total Time 0.00837	Per Sample Data Time 0.00195	Per Sample DNN Time 0.00642	Train Loss 0.0427	
+Epoch: [29][136/663]	Per Sample Total Time 0.00523	Per Sample Data Time 0.00053	Per Sample DNN Time 0.00470	Train Loss 0.0423	
+Epoch: [29][236/663]	Per Sample Total Time 0.00474	Per Sample Data Time 0.00031	Per Sample DNN Time 0.00443	Train Loss 0.0421	
+Epoch: [29][336/663]	Per Sample Total Time 0.00453	Per Sample Data Time 0.00022	Per Sample DNN Time 0.00431	Train Loss 0.0422	
+Epoch: [29][436/663]	Per Sample Total Time 0.00443	Per Sample Data Time 0.00017	Per Sample DNN Time 0.00426	Train Loss 0.0421	
+Epoch: [29][536/663]	Per Sample Total Time 0.00436	Per Sample Data Time 0.00014	Per Sample DNN Time 0.00421	Train Loss 0.0423	
+Epoch: [29][636/663]	Per Sample Total Time 0.00428	Per Sample Data Time 0.00012	Per Sample DNN Time 0.00416	Train Loss 0.0422	
+start validation
+acc: 0.976656
+AUC: 0.999622
+Avg Precision: 0.533484
+Avg Recall: 0.999917
+d_prime: 4.763209
+train_loss: 0.042214
+valid_loss: 0.683803
+validation finished
+Epoch-29 lr: 8.236400355459297e-06
+epoch 29 training time: 392.256
+---------------
+2022-08-02 06:14:35.513894
+current #epochs=30, #steps=19227
+Epoch: [30][73/663]	Per Sample Total Time 0.00659	Per Sample Data Time 0.00124	Per Sample DNN Time 0.00535	Train Loss 0.0424	
+Epoch: [30][173/663]	Per Sample Total Time 0.00512	Per Sample Data Time 0.00053	Per Sample DNN Time 0.00459	Train Loss 0.0423	
+Epoch: [30][273/663]	Per Sample Total Time 0.00474	Per Sample Data Time 0.00034	Per Sample DNN Time 0.00440	Train Loss 0.0422	
+Epoch: [30][373/663]	Per Sample Total Time 0.00456	Per Sample Data Time 0.00025	Per Sample DNN Time 0.00430	Train Loss 0.0422	
+Epoch: [30][473/663]	Per Sample Total Time 0.00444	Per Sample Data Time 0.00020	Per Sample DNN Time 0.00424	Train Loss 0.0422	
+Epoch: [30][573/663]	Per Sample Total Time 0.00438	Per Sample Data Time 0.00017	Per Sample DNN Time 0.00421	Train Loss 0.0422	
+start validation
+acc: 0.976756
+AUC: 0.999645
+Avg Precision: 0.536765
+Avg Recall: 0.999834
+d_prime: 4.788222
+train_loss: 0.042131
+valid_loss: 0.683773
+validation finished
+Epoch-30 lr: 8.236400355459297e-06
+epoch 30 training time: 394.938
+---------------evaluate on the validation set---------------
+Accuracy: 0.977658
+AUC: 0.999674
+---------------the evaluation dataloader---------------
+now using following mask: 0 freq, 0 time
+now using mix-up with rate 0.000000
+now process speechcommands
+use dataset mean -6.846 and std 5.565 to normalize the input.
+number of classes is 35
+---------------evaluate on the test set---------------
+Accuracy: 0.981281
+AUC: 0.999809
