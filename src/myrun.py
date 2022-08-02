@@ -97,7 +97,7 @@ os.makedirs("%s/models" % args.exp_dir, exist_ok=True)
 with open("%s/args.pkl" % args.exp_dir, "wb") as f:
     pickle.dump(args, f)                                                #存储参数信息
 
-print('Now starting training for {:d} epochs'.format(args.n_epochs))
+print('Now starting training for {:d} epochs, model size is{:s}'.format(args.n_epochs, args.model_size))
 train(audio_model, train_loader, val_loader, args)
 
 # for speechcommands dataset, evaluate the best model on validation set on the test set
