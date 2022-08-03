@@ -58,9 +58,9 @@ def train(audio_model, train_loader, test_loader, args):
     # #resume training 
     if args.resume:
         optimizer = torch.optim.Adam([{'params': trainables, 'initial_lr': args.lr}], args.lr, weight_decay=5e-7, betas=(0.95, 0.999))
-        audio_model.load_state_dict(torch.load("%s/models/best_audio_model.pth" % (exp_dir), map_location='cpu'))
+        audio_model.load_state_dict(torch.load("../input/best-model/best_audio_model (1).pth", map_location='cpu'))
         audio_model = audio_model.to(device)
-        optimizer.load_state_dict(torch.load("%s/models/best_optim_state.pth" % (exp_dir), map_location='cpu'))
+        optimizer.load_state_dict(torch.load("../input/best-model/best_optim_state.pth", map_location='cpu'))
         epoch = args.last_epoch  #手动看
 
     # dataset specific settings
