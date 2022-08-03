@@ -22,7 +22,7 @@ export TORCH_HOME=../../pretrained_models
 
 model=Conv
 dataset=speechcommands
-imagenetpretrain=True
+imagenetpretrain=False
 audiosetpretrain=False
 bal=none
 lr=2.5e-4
@@ -30,7 +30,7 @@ epoch=500
 freqm=48   #mask
 timem=48
 mixup=0.6
-batch_size=128
+batch_size=256
 fstride=4
 tstride=4
 tr_data=./data/datafiles/speechcommand_train_data.json
