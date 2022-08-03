@@ -26,11 +26,11 @@ imagenetpretrain=True
 audiosetpretrain=False
 bal=none
 lr=2.5e-4
-epoch=31
+epoch=500
 freqm=48   #mask
 timem=48
 mixup=0.6
-batch_size=32
+batch_size=128
 fstride=4
 tstride=4
 tr_data=./data/datafiles/speechcommand_train_data.json
@@ -39,7 +39,7 @@ eval_data=./data/datafiles/speechcommand_eval_data.json
 exp_dir=./exp/test-${dataset}-f$fstride-t$tstride-p$imagenetpretrain-b$batch_size-lr${lr}-demo
 model_size="tiny"
 resume=True
-last_epoch=30
+last_epoch=50
 
 if [ -d $exp_dir ]; then
   echo 'exp exist'
