@@ -9,6 +9,8 @@ from ast import arg
 import sys
 import os
 import datetime
+
+from matplotlib.cbook import ls_mapper
 sys.path.append(os.path.dirname(os.path.dirname(sys.path[0])))
 from utilities import *
 import time
@@ -53,49 +55,50 @@ def train(audio_model, train_loader, test_loader, args):
     print('Total trainable parameter number is : {:.3f} million'.format(sum(p.numel() for p in trainables) / 1e6))
     optimizer = torch.optim.Adam(trainables, args.lr, weight_decay=5e-7, betas=(0.95, 0.999))
 
+    # #resume training 
+    if args.resume:
+        optimizer = torch.optim.Adam([{'params': trainables, 'initial_lr': args.lr}], args.lr, weight_decay=5e-7, betas=(0.95, 0.999))
+        audio_model.load_state_dict(torch.load("%s/models/best_audio_model.pth" % (exp_dir), map_location='cpu'))
+        audio_model = audio_model.to(device)
+        optimizer.load_state_dict(torch.load("%s/models/best_optim_state.pth" % (exp_dir), map_location='cpu'))
+        epoch = args.last_epoch  #手动看
+
     # dataset specific settings
     #scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.5, patience=args.lr_patience, verbose=True)
+
     if args.dataset == 'audioset':
         if len(train_loader.dataset) > 2e5:
             print('scheduler for full audioset is used')
-            scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, [2,3,4,5], gamma=0.5, last_epoch=-1)
+            scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, [2,3,4,5], gamma=0.5, last_epoch=args.last_epoch)
         else:
             print('scheduler for balanced audioset is used')
-            scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, [10, 15, 20, 25], gamma=0.5, last_epoch=-1)
+            scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, [10, 15, 20, 25], gamma=0.5, last_epoch=args.last_epoch)
         main_metrics = 'mAP'
         loss_fn = nn.BCEWithLogitsLoss()
         warmup = True
     elif args.dataset == 'esc50':
         print('scheduler for esc-50 is used')
-        scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, list(range(5,26)), gamma=0.85)  # 在第5,26个epoch学习率分别承gamma
+        scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, list(range(5,26)), gamma=0.85, last_epoch=args.last_epoch)  # 在第5,26个epoch学习率分别承gamma
         main_metrics = 'acc'
         loss_fn = nn.CrossEntropyLoss()
         warmup = False
     elif args.dataset == 'speechcommands':
         print('scheduler for speech commands is used')
-
-        # #resume training 
-        # if os.path.exists("%s/models" % (exp_dir)):
-        #     audio_model.load_state_dict(torch.load("%s/models/best_audio_model.pth" % (exp_dir), map_location='cpu'))
-        #     audio_model = audio_model.to(device)
-        #     optimizer.load_state_dict(torch.load("%s/models/best_optim_state.pth" % (exp_dir), map_location='cpu'))
-        #     epoch = 30  #手动看
-        #scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, list(range(5,26)), gamma=0.85, last_epoch=epoch)
-        #     print("---------------resume training-----------------------")
-
-        scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, list(range(5,26)), gamma=0.85)
+        scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, list(range(5,26)), gamma=0.85, last_epoch=args.last_epoch)
         main_metrics = 'acc'
         loss_fn = nn.BCEWithLogitsLoss()  #这个函数可用于一个对象同时有多标签的情况
         warmup = False
     elif args.dataset == 'AVWWS':
         print('scheduler for AVWWS is used')
-        scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, list(range(5,26)), gamma=0.85)
+        scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, list(range(5,26)), gamma=0.85, last_epoch=args.last_epoch)
         main_metrics = 'acc'
         loss_fn = nn.CrossEntropyLoss()
         warmup = False        
         
     else:
         raise ValueError('unknown dataset, dataset should be in [audioset, speechcommands, esc50]')
+
+
     print('now training with {:s}, main metrics: {:s}, loss function: {:s}, learning rate scheduler: {:s}'.format(str(args.dataset), str(main_metrics), str(loss_fn), str(scheduler)))
     args.loss_fn = loss_fn
 
