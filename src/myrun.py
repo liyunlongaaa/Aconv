@@ -44,6 +44,7 @@ parser.add_argument("--lr_patience", type=int, default=2, help="how many epoch t
 
 parser.add_argument("--n-print-steps", type=int, default=100, help="number of steps to print statistics")
 parser.add_argument('--save_model', help='save the model or not', type=ast.literal_eval)
+parser.add_argument("--last_epoch", type=int, default=-1, help="number of epoch of last train")
 
 parser.add_argument('--freqm', help='frequency mask max length', type=int, default=0)
 parser.add_argument('--timem', help='time mask max length', type=int, default=0)
@@ -54,7 +55,8 @@ parser.add_argument("--fstride", type=int, default=10, help="soft split freq str
 parser.add_argument("--tstride", type=int, default=10, help="soft split time stride, overlap=patch_size-stride")
 parser.add_argument('--imagenet_pretrain', help='if use ImageNet pretrained audio spectrogram transformer model', type=ast.literal_eval, default='True')
 parser.add_argument('--audioset_pretrain', help='if use ImageNet and audioset pretrained audio spectrogram transformer model', type=ast.literal_eval, default='False')
-parser.add_argument('--model_size', type=str, help='model_size', default='xlarge')
+parser.add_argument('--resume', help='continue to train', type=ast.literal_eval, default='False')
+parser.add_argument('--model_size', type=str, help='model_size', default='large')
 
 args = parser.parse_args()
 
@@ -97,7 +99,7 @@ os.makedirs("%s/models" % args.exp_dir, exist_ok=True)
 with open("%s/args.pkl" % args.exp_dir, "wb") as f:
     pickle.dump(args, f)                                                #存储参数信息
 
-print('Now starting training for {:d} epochs, model size is{:s}'.format(args.n_epochs, args.model_size))
+print('Now starting training for {:d} epochs'.format(args.n_epochs))
 train(audio_model, train_loader, val_loader, args)
 
 # for speechcommands dataset, evaluate the best model on validation set on the test set
