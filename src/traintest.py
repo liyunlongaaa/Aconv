@@ -183,10 +183,10 @@ def train(audio_model, train_loader, test_loader, args):
         stats, valid_loss = validate(audio_model, test_loader, args, epoch)
 
         # ensemble results， 和之前模型结果做ensemble
-        cum_stats = validate_ensemble(args, epoch)
-        cum_mAP = np.mean([stat['AP'] for stat in cum_stats])
-        cum_mAUC = np.mean([stat['auc'] for stat in cum_stats])
-        cum_acc = cum_stats[0]['acc']       #只取第一类的acc??? 都一样
+        #cum_stats = validate_ensemble(args, epoch)
+        #cum_mAP = np.mean([stat['AP'] for stat in cum_stats])
+        #cum_mAUC = np.mean([stat['auc'] for stat in cum_stats])
+        #cum_acc = cum_stats[0]['acc']       #只取第一类的acc??? 都一样
 
         mAP = np.mean([stat['AP'] for stat in stats])   # MAP : https://blog.csdn.net/tigerda/article/details/78651159
         mAUC = np.mean([stat['auc'] for stat in stats])
@@ -226,9 +226,9 @@ def train(audio_model, train_loader, test_loader, args):
             if main_metrics == 'acc':
                 best_epoch = epoch
 
-        if cum_mAP > best_cum_mAP:
-            best_cum_epoch = epoch
-            best_cum_mAP = cum_mAP
+        #if cum_mAP > best_cum_mAP:
+        #    best_cum_epoch = epoch
+        #    best_cum_mAP = cum_mAP
 
         if best_epoch == epoch:
             torch.save(audio_model.state_dict(), "%s/models/best_audio_model.pth" % (exp_dir))
