@@ -210,9 +210,9 @@ def train(audio_model, train_loader, test_loader, args):
         print("valid_loss: {:.6f}".format(valid_loss))
 
         if main_metrics == 'mAP':
-            result[epoch-1, :] = [mAP, mAUC, average_precision, average_recall, d_prime(mAUC), loss_meter.avg, valid_loss, cum_mAP, cum_mAUC, optimizer.param_groups[0]['lr']]
+            result[epoch-1, :] = [mAP, mAUC, average_precision, average_recall, d_prime(mAUC), loss_meter.avg, valid_loss, optimizer.param_groups[0]['lr']]
         else:
-            result[epoch-1, :] = [acc, mAUC, average_precision, average_recall, d_prime(mAUC), loss_meter.avg, valid_loss, cum_acc, cum_mAUC, optimizer.param_groups[0]['lr']]
+            result[epoch-1, :] = [acc, mAUC, average_precision, average_recall, d_prime(mAUC), loss_meter.avg, valid_loss, optimizer.param_groups[0]['lr']]
         np.savetxt(exp_dir + '/result.csv', result, delimiter=',')
         print('validation finished')
 
